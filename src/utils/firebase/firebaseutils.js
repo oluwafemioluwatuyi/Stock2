@@ -12,6 +12,8 @@ import {
 } from 'firebase/firestore'
 
 
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyAdiiiO8Wg4CZGw6zSYnMB2Pnp7PtVAhVY",
     authDomain: "stock2-db.firebaseapp.com",
