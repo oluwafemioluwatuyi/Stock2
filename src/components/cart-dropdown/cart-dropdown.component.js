@@ -5,7 +5,6 @@ import { CartContext } from '../../contexts/cart.context';
 
 
 import './cart-dropdown.styles.scss';
-import { useActionData } from 'react-router-dom';
 import { useContext } from 'react';
 
 const CartDropdown = () => {
