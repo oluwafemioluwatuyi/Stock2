@@ -84,7 +84,7 @@ const SignInForm = () => {
                  value={email}
                  />
                 <FormInput
-                label='password'
+                label='Password'
                 type="password" 
                 required 
                 onChange={hangleChange}
