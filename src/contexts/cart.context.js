@@ -92,8 +92,7 @@ export const CartProvider = ({children}) =>{
          0)
         setCartTotal(newCartTotal)
 
-    }, [cartIte
-        ms])
+    }, [cartItems]);
 
     const addItemToCart = (productToAdd) => {
         setCartItems(addCartItem(cartItems, productToAdd));
