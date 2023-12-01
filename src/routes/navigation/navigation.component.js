@@ -7,10 +7,13 @@ import {ReactComponent as CrwnLogo} from '../../assets/crown.svg' ;
 import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 import { signOutUser } from '../../utils/firebase/firebaseutils';
+import {useSelector } from 'react-redux';
+import { selectCurrentUser } from '../../store/user/user.selector';
 
 
 const Navigation = ()=>{
-   const {currentUser} = useContext(UserContext);
+ const currentUser = useSelector(selectCurrentUser); 
+  //const {currentUser} = useContext(UserContext);
    const {isCartOpen} = useContext(CartContext)
    console.log(currentUser);
     return(
