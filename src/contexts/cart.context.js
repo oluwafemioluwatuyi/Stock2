@@ -1,5 +1,5 @@
 import { createContext, useReducer} from 'react';
-import createAction from '../utils/reducer/reducer.utils';
+import {createAction} from '../utils/reducer/reducer.utils';
  
 
 
@@ -67,20 +67,25 @@ const INITIAL_STATE = {
 
 }
 
-
+const CART_ACTION_TYPES = {
+    SET_CART_ITEMS: 'SET_CART_ITEMS',
+    SET_IS_CART_OPEN: 'SET_IS_CART_OPEN',
+    SET_CART_COUNT: 'SET_CART_COUNT',
+    SET_CART_TOTAL: 'SET_CART_TOTAL'
+}
 
 const cartReducer = (state, action) =>{
     const {type, payload} = action;
 
 
     switch(type) {
-        case 'SET_CART_ITEMS':
+        case CART_ACTION_TYPES.SET_CART_ITEMS:
             return{
                 ...state,
                 ...payload
             } ;
 
-            case 'SET_IS_CART_OPEN':
+            case CART_ACTION_TYPES.SET_CART_ITEMS:
                 return{
                     ...state,
                     isCartOpen:payload,
@@ -122,14 +127,14 @@ export const CartProvider = ({children}) =>{
             (total, cartItem) => total + cartItem.quantity * cartItem.price,
          0);
 
-         dispatch({
-            type: 'SET_CART_ITEMS',
-             payload: {
+         dispatch(
+            createAction(CART_ACTION_TYPES.SET_CART_ITEMS,{
                 cartItems: newCartItems,
                 cartTotal: newCartTotal,
-                cartCount:newCartCount}
-            });
-    }
+                cartCount:newCartCount
+            })
+         )
+    };
 
     const addItemToCart = (productToAdd) => {
         const newCartItems = addCartItem(cartItems, productToAdd);
@@ -150,7 +155,9 @@ export const CartProvider = ({children}) =>{
     }
 
     const setIsCartOpen = (bool) => {
-        dispatch({type: 'SET_IS_CART_OPEN', payload: bool});
+        dispatch(
+            createAction(CART_ACTION_TYPES.SET_IS_CART_OPEN, bool)
+        );
     }
 
     const value = {isCartOpen, 

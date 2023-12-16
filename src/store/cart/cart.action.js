@@ -74,21 +74,3 @@ export const addItemToCart = ( cartItems, productToAdd) => {
 }
 
 
-
-//  export const addItemToCart = ( newCartItems, productToAdd) => {
-//     const newCartItems = addCartItem(cartItems, productToAdd);
-//     return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
-
-// }
-
-//  export const removeItemFromCart = ( newCartItems, cartItemToRemove) => {
-//      const newCartItems = removeCartItem(cartItems, cartItemToRemove);
-//      return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
-
-// }
-
-//  export const clearItemFromCart = ( newCartItems, cartItemToClear) => {
-//     const newCartItems = clearCartItem(cartItems, cartItemToClear);
-//     return createAction(CART_ACTION_TYPES.SET_CART_ITEMS, newCartItems);
-
-// }
