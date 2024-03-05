@@ -15,7 +15,7 @@ const persistConfig = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-const middlewares = [process.env.NODE_ENV ==='development' && logger, thunk, ].filter(Boolean);
+const middlewares = [process.env.NODE_ENV ==='development' && logger, thunk,].filter(Boolean);
 
 const composedEnchancer = compose(applyMiddleware(...middlewares));
 
