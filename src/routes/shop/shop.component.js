@@ -12,7 +12,7 @@ import './shop.styles.scss'
 
 const Shop = () => {
 
-    const dispatch = useDispatch
+    const dispatch = useDispatch();
 
     useEffect(() =>{
        dispatch(fetchCategoriesAsync());
