@@ -16,7 +16,8 @@ const Shop = () => {
     // updated redux-saga for the middleware
     useEffect(() =>{
        dispatch(fetchCategoriesStart());
-    }, []);
+       console.log(fetchCategoriesStart)
+    }, );
     
     return(
         <Routes>

@@ -17,6 +17,7 @@ export function* fetchCategoriesAsync(){
        yield put(fetchCategoriesSuccess(categoriesArray));
     }catch(error){
         yield put(fetchCategoriesFailed(error));
+        console.log(fetchCategoriesFailed)
     }
 }
 
