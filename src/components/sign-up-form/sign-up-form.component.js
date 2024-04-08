@@ -1,10 +1,10 @@
 import { useState} from "react";
-
-import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebaseutils";
+import { useDispatch } from "react-redux";
+//import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "../../utils/firebase/firebaseutils";
 import FormInput from "../form-input/form-input.component";
 import './sign-up-form.styles.scss';
 import Button from "../button/button.component";
-
+import {signUpStart } from "../../store/user/user.action";
 const defaultFormFields = {
     displayName: '',
     email: '',
@@ -17,6 +17,8 @@ const SignUpForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
 
     const {displayName, email, password, confirmPassword} = formFields;
+
+    const dispatch = useDispatch(); 
 
 
 
@@ -46,8 +48,7 @@ const SignUpForm = () => {
         }
 
         try{
-            const {user} = await createAuthUserWithEmailAndPassword(email, password);
-            await createUserDocumentFromAuth(user, {displayName});
+           dispatch(signUpStart(email, password, displayName));
             resetFormField();
 
 
