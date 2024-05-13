@@ -2,8 +2,8 @@ import { CATEGORIES_ACTION_TYPES } from "./category.types";
 export const CATEGORIES_INITIAL_STATE = {
     categories: [],
     isLoading: false,
-    error:null
-}
+    error:null,
+};
 
 export const categoriesReducer = (state = CATEGORIES_INITIAL_STATE, action = {}) => {
     const {type, payload} = action;
