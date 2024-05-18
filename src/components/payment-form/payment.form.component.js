@@ -24,7 +24,10 @@ const PaymentForm =()=>{
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify({amount:10000})
-        }).then(res => res.json());
+        }).then(res =>{
+            return res.json()
+        }
+    );
 
         console.log(response);
 
