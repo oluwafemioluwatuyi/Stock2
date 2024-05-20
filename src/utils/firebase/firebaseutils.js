@@ -1,6 +1,6 @@
 import {initializeApp} from 'firebase/app';
 import {getAuth,
-        signInWithRedirect,
+        //signInWithRedirect,
         signInWithPopup,
         createUserWithEmailAndPassword,
         signInWithEmailAndPassword,
