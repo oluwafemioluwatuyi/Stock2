@@ -1,12 +1,12 @@
 import './checkout-item.styles.scss';
-import { UseSelector, useDispatch, useSelector } from 'react-redux';
+import {  useDispatch, useSelector } from 'react-redux';
 import { selectCartItems } from '../../store/cart/cart.selector';
 import { addItemToCart, clearItemFromCart, removeItemFromCart } from '../../store/cart/cart.action';
 
 // import { useContext } from 'react';
 // import { CartContext } from '../../contexts/cart.context';
 
-import Checkout from '../../routes/checkout/checkout.component';
+//import Checkout from '../../routes/checkout/checkout.component';
 
 
 const CheckoutItem = ({cartItem}) => {

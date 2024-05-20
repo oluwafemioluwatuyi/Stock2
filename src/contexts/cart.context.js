@@ -79,11 +79,11 @@ const cartReducer = (state, action) =>{
 
 
     switch(type) {
-        case CART_ACTION_TYPES.SET_CART_ITEMS:
-            return{
-                ...state,
-                ...payload
-            } ;
+        // case CART_ACTION_TYPES.SET_CART_ITEMS:
+        //     return{
+        //         ...state,
+        //         ...payload
+        //     } ;
 
             case CART_ACTION_TYPES.SET_CART_ITEMS:
                 return{

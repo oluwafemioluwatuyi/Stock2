@@ -1,11 +1,11 @@
-import { useState, useContext} from "react";
+import { useState} from "react";
 import { useDispatch } from "react-redux";
 
-import { signInWithGooglePopup,
-         signInAuthUserWithEmailAndPassword,
+// import { signInWithGooglePopup,
+//          signInAuthUserWithEmailAndPassword,
 
-         createUserDocumentFromAuth } 
-         from "../../utils/firebase/firebaseutils";
+//          createUserDocumentFromAuth } 
+//          from "../../utils/firebase/firebaseutils";
 import { googleSignInStart, emailSignInStart } from "../../store/user/user.action";
 import FormInput from "../form-input/form-input.component";
 import './sign-in-form.styles.scss';

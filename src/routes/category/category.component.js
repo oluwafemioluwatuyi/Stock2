@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Spinner from '../../components/spinner/spinner.component';
 import './category.styles.scss'
 
-import { CategoriesContext } from '../../contexts/categories.context';
+//import { CategoriesContext } from '../../contexts/categories.context';
 import ProductCard from '../../components/product-card/product-card.component';
 
 
