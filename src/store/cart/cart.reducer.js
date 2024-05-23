@@ -3,9 +3,7 @@ export const CART_INITIAL_STATE = {
     isCartOpen: false,
     cartItems: [],
     
-
 }
-
 
 
 export const cartReducer = (state= CART_INITIAL_STATE, action= {}) =>{
