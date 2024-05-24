@@ -19,7 +19,7 @@ export const CATEGORIES_INITIAL_STATE: CategoriesState = {
 
 export const categoriesReducer = (
     state = CATEGORIES_INITIAL_STATE, 
-    action = {} as AnyAction // just one type of the action
+    action : AnyAction // just one type of the action
 ): CategoriesState => {
     // instead of using switch statement, we narrow it by using the match method
     if(fetchCategoriesStart.match(action)){
